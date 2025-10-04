@@ -1,0 +1,65 @@
+    1  git --version
+    2  cd Daniel
+    3  cd
+    4  cd ~
+    5  mkdir -p proyecto_comandos/{documentos,imagenes,scripts}
+    6  ls -l proyecto_comandos
+    7  echo "Primera línea de mis notas" > proyecto_comandos/documentos/notas.txt
+    8  echo "Segunda línea con una idea" >> proyecto_comandos/documentos/notas.txt
+    9  echo "Tercera línea — recordatorio" >> proyecto_comandos/documentos/notas.txt
+   10  cat proyecto_comandos/documentos/notas.txt
+   11  nano proyecto_comandos/documentos/notas.txt
+   12  # - Escribe 3 líneas, luego Ctrl+O (guardar), Enter, Ctrl+X (salir)
+   13  cp proyecto_comandos/documentos/notas.txt proyecto_comandos/scripts/backup_notas.txt
+   14  # verificar
+   15  ls -l proyecto_comandos/scripts
+   16  ls -l proyecto_comandos/scripts
+   17  mv proyecto_comandos/scripts/backup_notas.txt proyecto_comandos/imagenes/
+   18  ls -l proyecto_comandos/imagenes
+   19  # redirige el contenido de notas.txt a resumen.txt (crea o sobrescribe)
+   20  cat proyecto_comandos/documentos/notas.txt > proyecto_comandos/documentos/resumen.txt
+   21  cat proyecto_comandos/documentos/resumen.txt
+   22  echo "Línea adicional añadida al resumen" >> proyecto_comandos/documentos/resumen.txt
+   23  tail -n 5 proyecto_comandos/documentos/resumen.txt
+   24  rm proyecto_comandos/imagenes/backup_notas.txt
+   25  ls -l proyecto_comandos/imagenes
+   26  # comprueba si está vacía
+   27  if [ -z "$(ls -A proyecto_comandos/imagenes 2>/dev/null)" ]; then   rmdir proyecto_comandos/imagenes && echo "Carpeta imágenes eliminada (estaba vacía)."; else   echo "La carpeta imagenes NO está vacía. No se eliminará."; fi
+   28  history | tee tarea-s1-daniel_apellido.txt
+   29  history | tee tarea-s1-daniel_orellana.txt
+   30  ls -l tarea-s1-daniel_apellido.txt
+   31  cat tarea-s1-daniel_apellido.txt
+   32  git add tarea-s1-daniel_apellido.txt
+   33  git commit -m "Añadir tarea-s1 con historial"
+   34  git push origin main
+   35  cd Documentos
+   36  mkdir -p proyecto_comandos/{documentos,imagenes,scripts}
+   37  ls -l proyecto_comandos
+   38  echo "Primera línea de mis notas" > proyecto_comandos/documentos/notas.txt
+   39  echo "Segunda línea con una idea" >> proyecto_comandos/documentos/notas.txt
+   40  echo "Tercera línea — recordatorio" >> proyecto_comandos/documentos/notas.txt
+   41  cat proyecto_comandos/documentos/notas.txt
+   42  cp proyecto_comandos/documentos/notas.txt proyecto_comandos/scripts/backup_notas.txt
+   43  ls -l proyecto_comandos/scripts
+   44  mv proyecto_comandos/scripts/backup_notas.txt proyecto_comandos/imagenes/
+   45  ls -l proyecto_comandos/imagenes
+   46  cat proyecto_comandos/documentos/notas.txt > proyecto_comandos/documentos/resumen.txt
+   47  cat proyecto_comandos/documentos/resumen.txt
+   48  echo "Línea adicional añadida al resumen" >> proyecto_comandos/documentos/resumen.txt
+   49  tail -n 5 proyecto_comandos/documentos/resumen.txt
+   50  rm proyecto_comandos/imagenes/backup_notas.txt
+   51  rm proyecto_comandos/imagenes/backup_notas.txt
+   52  # comprueba si está vacía
+   53  if [ -z "$(ls -A proyecto_comandos/imagenes 2>/dev/null)" ]; then   rmdir proyecto_comandos/imagenes && echo "Carpeta imágenes eliminada (estaba vacía)."; else   echo "La carpeta imagenes NO está vacía. No se eliminará."; fi
+   54  explorer.exe .
+   55  history | tee tarea-s1-daniel_orellana.txt
+   56  ls -l tarea-s1-daniel_apellido.txt
+   57  cat tarea-s1-daniel_apellido.txt
+   58  ls -l tarea-s1-daniel_orellana.txt
+   59  cat tarea-s1-daniel_orellana.txt
+   60  explorer.exe .
+   61  history | tee tarea-s1-daniel_orellana.txt
+   62  git add tarea-s1-daniel_orellana.txt
+   63  git commit -m "Añadir tarea-s1 con historial"
+   64  git push origin main
+   65  history | tee tarea-s1-daniel_orellana.txt
