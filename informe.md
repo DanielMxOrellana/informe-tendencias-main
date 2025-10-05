@@ -24,7 +24,7 @@ Los comandos de Linux son herramientas fundamentales para la administración de 
 
 **Redirección de entrada/salida:**
 - `>`: Redirecciona la salida a un archivo (sobrescribe)
-- `>>`: Redirecciona la salida a un archivo (añade al final)
+- `>>`: Redirecciona la salidab a un archivo (añade al final)
 - `|`: Pipe, conecta la salida de un comando con la entrada de otro
 
 **Control de versiones Git:**
@@ -74,7 +74,7 @@ cd Documentos
 mkdir -p proyecto_comandos/{documentos,imagenes,scripts}
 ls -l proyecto_comandos
 ```
-
+![alt text](image-1.png)
 **Paso 3:** Crear archivo de notas con redirección de salida
 ```bash
 echo "Primera línea de mis notas" > proyecto_comandos/documentos/notas.txt
@@ -92,6 +92,7 @@ nano proyecto_comandos/documentos/notas.txt
 ```bash
 cp proyecto_comandos/documentos/notas.txt proyecto_comandos/scripts/backup_notas.txt
 ls -l proyecto_comandos/scripts
+
 ```
 
 **Paso 6:** Mover archivo de backup a directorio de imágenes
@@ -99,7 +100,7 @@ ls -l proyecto_comandos/scripts
 mv proyecto_comandos/scripts/backup_notas.txt proyecto_comandos/imagenes/
 ls -l proyecto_comandos/imagenes
 ```
-
+![alt text](image-2.png)
 **Paso 7:** Crear archivo resumen y agregar contenido adicional
 ```bash
 cat proyecto_comandos/documentos/notas.txt > proyecto_comandos/documentos/resumen.txt
@@ -115,7 +116,7 @@ if [ -z "$(ls -A proyecto_comandos/imagenes 2>/dev/null)" ]; then
 else 
   echo "La carpeta imagenes NO está vacía. No se eliminará."
 fi
-```
+```![alt text](image-3.png)
 
 **Paso 9:** Generar archivo de historial y confirmar en Git
 ```bash
